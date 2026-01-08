@@ -1,0 +1,278 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "General sans";
+}
+ html,body{
+    width:100%;
+    height:100%;
+    background-color: black;
+    color: white;
+ }
+
+ #main{
+    width:100%;
+    background-color: black;
+
+ }
+ .bounding{
+    width: fit-content;
+    overflow: hidden;
+
+}
+.boundingelem{
+    transform: translateY(100%);
+    display: inline-block;
+}
+  #smallcircle{
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index:99999;
+    mix-blend-mode: difference;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    /* pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: fixed; /* Screen par chipka rahega */
+    /* z-index: 99999;
+    mix-blend-mode: difference; Design ko modern banane ke liye */
+    /* opacity: 0; Shuruat mein hidden rahega jab tak mouse screen par na aaye */
+    /* transition: opacity ease 0.3s, transform cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+    transform: translate(-50%,-50%); */ 
+ }
+ #viewid{
+    display: none;
+     font-size: 4px;
+     font-style: 700;
+     color: black;
+     pointer-events: none;
+ }
+  
+#hero{
+    width:100%;
+    height:100vh;
+    position: relative;
+}
+#nav{
+    display: flex;
+    width:100%;
+    padding: 20px 40px;
+    color: white;
+    justify-content:space-between;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+}
+#nav a{
+    color: rgb(222, 211, 211);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+#heading{
+    margin-top: 50px;
+}
+#heading h1{
+    font-size: 10vw;
+    text-transform: uppercase;
+    line-height: 1;
+    opacity: 0.7;
+    font-family: "GENERAL SANS";
+    font-weight: 800;
+    margin-left: 40px;
+}
+#heading #secondh1{
+    margin-left: 145px;
+    margin-top: 0px;
+}
+.blocktext h5{
+    padding-left: 41.5rem;
+text-align: right;
+text-transform: uppercase;
+font-size: 15px;
+text-align: right !important;
+
+}
+.blocktext{
+    width: fit-content;
+    font-size: 1vw;
+    
+    display: flex;
+    flex-direction: column;
+
+}
+#chottiheadings{
+    margin-top: 110px;
+    margin-right: 1.8rem;
+}
+#chottiheadings h5{
+    text-align: right;
+    padding-left: 62.5rem;
+    text-transform: uppercase;
+    /* margin-top: .5vw; */
+    font: size 2vw;;
+
+}
+#herofooter{
+    margin-top: 25px;
+    display: flex ;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0 2vw;
+    
+
+}
+#herofooter a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: "GENERAL SANS";
+}
+
+#herofooter #iconset{
+    display: flex;
+    gap:5px;
+}
+#herofooter .circle{
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+    background-color: rgb(118, 117, 114);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+#second{
+    padding-right: 10vw;
+    padding-top: 200px;
+    width:100%;
+    height:100vh;
+
+}
+.elem{
+    position:relative;
+    width:100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 1vw 2vw;
+    padding-right: 0;
+    border-top: 1px solid blanchedalmond;
+    overflow:visible;
+    user-select: none;
+}
+.elem h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    color: azure;
+}
+.elemlast{
+    border-bottom: 1px solid blanchedalmond;
+}
+.elem img{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+   opacity:0;
+   display: none;
+   border-radius: 20%;
+    z-index: 99;
+    pointer-events: none !important;
+    transform:translate(-50%,-50%);
+    will-change: none;
+
+}
+
+#about{
+    width:100%;
+    margin-top: 10vw;
+    padding: 5vw 8vw;
+    padding-left: 35vw;
+    display: flex;
+    gap:50px;
+    align-items: center;
+}
+#about img{
+    width: 300px;
+    height: 250px;
+    border-radius: 50%;
+}
+#textabout{
+    width:29rem;
+    background-attachment: fixed;
+    font-family: "GENERAL SANS";
+}
+#textabout h5{
+    opacity: .6;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+#textabout p{
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+#textabout a{
+    padding: 12px 22px;
+    border: 1px solid snow;
+    text-decoration: none;
+    border-radius: 100px;
+    color:white;
+}
+#subscribe{
+    padding: 50px 30px;
+}
+
+#subscribe h3{
+    padding-bottom: 20%;
+}
+#finalfooter{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px 30px;
+}
+#footerleft{
+    display:flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: large;
+}
+#footerleft h5{
+    margin-right: 5px;
+    
+}
+#footerright{
+    display:flex;
+    justify-content: space-between;
+    text-align: center;
+    gap:20px;
+}
+#finalfooter a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: "GENERAL SANS";
+    font-weight: 500;
+    font-size: 15px;
+}
+
