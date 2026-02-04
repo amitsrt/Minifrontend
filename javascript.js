@@ -17,19 +17,12 @@ function mouseSqueezer() {
         // Speed calculate karna
         var xdiff = dets.clientX - xprev;
         var ydiff = dets.clientY - yprev;
-
-        // Scale values (0.8 se 1.2 ke beech pichkana)
-        // Note: xdiff/ydiff ko thoda normalize karne ke liye hum mapping use karte hain
         xscale = gsap.utils.clamp(0.8, 1.2, xdiff / 10); 
         yscale = gsap.utils.clamp(0.8, 1.2, ydiff / 10);
 
         xprev = dets.clientX;
         yprev = dets.clientY;
-
-        // Circle ko move karne wala function call
         circleMouseFollower(dets.clientX, dets.clientY, xscale, yscale);
-
-        // Rukne par wapas round (1,1) karna
         timeout = setTimeout(function () {
             document.querySelector("#smallcircle").style.transform = 
             `translate(${dets.clientX}px, ${dets.clientY}px) scale(1, 1)`;
@@ -38,12 +31,9 @@ function mouseSqueezer() {
 }
 
 function circleMouseFollower(x, y, xscale, yscale) {
-    // Circle move aur squeeze dono yahan handle ho rahe hain
     document.querySelector("#smallcircle").style.transform = 
     `translate(${x}px, ${y}px) scale(${xscale}, ${yscale})`;
 }
-
-
 function anime() {
   var tl = gsap.timeline();
 
@@ -54,10 +44,10 @@ function anime() {
     duration: 2,  
   })
   tl.to(".boundingelem", {
-    y: 0,           // Ensure the element starts off-screen/below
-    ease: "expo.inOut",  // FIXED: Easing must be a string and use "inOut" (lowercase 'i')
+    y: 0,          
+    ease: "expo.inOut",  
     duration: 2,         
-    stagger: 0.5         // Animates elements one by one for a premium feel
+    stagger: 0.5        
   },"<");
 }
 window.addEventListener("load", function() {
@@ -133,5 +123,7 @@ document.querySelectorAll(".elem").forEach(function (elem) {
 
     rotate = gsap.utils.clamp(-12, 12, diff * 0.3);
   });
-
+  if (window.innerWidth < 768) {
+  document.querySelector("#smallcircle").style.display = "none";
+}
 });
