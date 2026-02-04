@@ -275,4 +275,68 @@ text-align: right !important;
     font-weight: 500;
     font-size: 15px;
 }
+@media (max-width: 768px) {
+
+  #nav{
+    padding: 15px 20px;
+  }
+
+  #heading h1{
+    font-size: 12vw;
+    margin-left: 20px;
+  }
+
+  #heading #secondh1{
+    margin-left: 20px;
+  }
+
+  .blocktext h5{
+    padding-left: 0;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  #chottiheadings{
+    margin-top: 40px;
+  }
+
+  #chottiheadings h5{
+    padding-left: 0;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 12px;
+  }
+
+  #herofooter{
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #second{
+    padding: 80px 5vw;
+    height: auto;
+  }
+
+  .elem h1{
+    font-size: 10vw;
+  }
+
+  .elem img{
+    display: none !important; /* disable hover images */
+  }
+
+  #about{
+    flex-direction: column;
+    padding: 10vw 5vw;
+  }
+
+  #textabout{
+    width: 100%;
+  }
+
+  #finalfooter{
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 
